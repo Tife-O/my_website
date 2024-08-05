@@ -1,0 +1,227 @@
+* {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+}
+
+.navBar {
+    background: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19.2px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+div {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    font-size: 22px;
+    padding: 20px;
+    font-weight: bolder;
+    
+    
+    
+
+
+}
+#me{
+    float: right; 
+    width: 900px;
+    height: auto;
+}
+#schools{
+    float: left; 
+    width: 700px;
+    height: auto;
+}
+#game {
+    float: left;
+    width: 1000px;
+    height: auto;
+}
+#navbar_logo {
+    display: flex;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; 
+    background-color: chocolate;
+    background-image: linear-gradient(to top, white 45%, orange 100%);
+    background-size: 100%;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 32px;
+}
+
+.unadded {
+    margin-right: 8px;
+}
+
+.navbar_menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar_item {
+    height: 100px;
+}
+
+.navbar_links {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 16px;
+    height: 100%;
+}
+
+.navbar_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px;
+    width: 100%;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: orange;
+    color: white;
+}
+
+.btn:hover {
+    background: white;
+    color: black;
+    transition: all 0.2s ease;
+}
+
+.navbar_links:hover {
+    color: orange;
+    transition: all 0.2s ease;
+}
+
+.ab_main_text {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+@media screen and (max-width: 960px) {
+    .navbar_container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar_menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0; 
+        transition: all 0.2s ease;
+        height: 479px;
+        z-index: -1;
+        background: black;
+    }
+
+    .navbar_menu.active {
+        background: black;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.3s ease;
+        z-index: 99;
+        height: 900px;
+        font-size: 25.6px;
+    }
+
+    #navbar_logo {
+        padding-left: 25px;
+    }
+
+    .navbar_toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: white;
+    }
+
+    .navbar_item {
+        width: 100%;
+    }
+
+    .navbar_links {
+        text-align: center;
+        padding: 32px;
+        width: 100%;
+        display: table;
+    }
+    #phone_menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+
+    }
+
+    .navbar_button {
+        padding-bottom: 32px;
+    }
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    .navbar_toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #phone_menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    #phone_menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    #phone_menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
